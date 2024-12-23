@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a4a2a29b;
+  color: #ffffff;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.night-mode {
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #2a2a40;
+  width: 18%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+.sidebar nav ul li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.sidebar nav ul li i {
+  margin-right: 10px;
+  color: #ffd700;
+}
+.sidebar nav ul li:hover {
+  color: #ffd700;
+}
+
+.toggle {
+  margin-top: auto;
+  text-align: center;
+}
+.toggle button {
+  background-color: #ffd700;
+  color: #1e1e2f;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.toggle button:hover {
+  background-color: #4d4100;
+  color: #ffffff;
+}
+
+/* Main Content Layout  */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Search Section */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+#search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #2a2a40;
+  color: #ffffff;
+}
+#search-bar::placeholder {
+  color: #b0b0b0;
+}
+
+#search-btn {
+  background-color: #ffd700;
+  color: #1e1e2f;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-colour 0.3s ease;
+}
+
+#search-btn:hover {
+  background-color: #4d4100;
+  color: #ffffff;
+}
+
+#greeting-message {
+  font-size: 18px;
+  color: #615d5d;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+/* Weather Display Section */
+
+.weather-display {
+  background-image: url(Images/default.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.weather-display h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#temperature {
+  font-size: 48px;
+  color: #ffd700;
+}
+
+#weather-condition {
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+}
+
+/* Forecast section */
+
+.forecast {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.forecast h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #615d5d;
+}
+
+.hourly-forecast {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.hourly-card {
+  background-color: #2a2a40;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  flex: 0 0 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  width: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hourly-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.hourly-card i {
+  font-size: 24px;
+  margin-bottom: 5px 0;
+  color: #ffd700;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+  height: 6px;
+}
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  height: 10px;
+}
+
+.hourly-forecast::-webkit-scrollbar-track {
+  background: #2a2a40;
+}
+
+/* Air-Conditions */
+.air-conditions {
+  background-color: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+}
+.air-conditions h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.conditions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.conditions-left p,
+.conditions-right p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 5px 0;
+}
+.conditions-left span,
+.conditions-right span {
+  font-weight: bold;
+  color: #ffd700;
+}
+.conditions-right h3 {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.weather-tips #weather-tip {
+  background-color: rgba(0, 0, 0, 0.406);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.weather-tips {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  transition: filter 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* filter: brightness(0.7); */
+}
+.see-more-btn {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.see-more-btn:hover {
+  background-color: #4d4100;
+  color: #ffffff;
+}
+
+/* 7-Day Forecast Section */
+
+.right-sidebar {
+  width: 25%;
+  background-color: #2a2a40;
+  padding: 20px;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar,
+.right-sidebar {
+  background-color: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+}
+.weekly-forecast {
+  margin-bottom: 20px;
+}
+.weekly-forecast h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.weekly-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.weekly-card {
+  background-color: #2a2a40;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.weekly-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+.weekly-card p {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.weekly-card i {
+  font-size: 24px;
+  color: #ffd700;
+  margin: 5px 0;
+}
