@@ -20,6 +20,8 @@ A simple **weather app UI** built using **HTML, CSS & JavaScript**. THis app **d
 - **HTML & CSS** - For Layout & styling.
 - **JavaScript** - Handles interactivity (Day/Night Mode, click Events).
 
+**Note:** THis project was built for learning purposes to explore and practice [mention technologies]. Security and production-level optimizations are not the primary focus.
+
 ## Preview
 
 ![ Weather App](/Images/pic.png)
